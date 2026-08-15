@@ -3,12 +3,15 @@
     --secondary-dark: #0f172a;  /* Azul marinho profundo */
     --card-dark: #1e293b;       /* Azul escuro para cartões */
     --accent-blue: #38bdf8;     /* Azul elétrico vibrante */
-    --hover-blue: #0284c7;      /* Azul escuro para ação */
-    --text-primary: #0f172a;    /* Texto principal */
-    --text-muted: #475569;      /* Texto de apoio */
-    --text-light: #ffffff;      /* Texto branco */
-    --bg-main: #f1f5f9;         /* Fundo levemente azulado */
-    --border-color: #cbd5e1;    /* Borda sutil */
+    --hover-blue: #0284c7;      /* Azul intermediário para interações */
+    
+    /* Substituição dos tons brancos por tons de azul */
+    --text-primary: #e0f2fe;    /* Azul gelo muito claro (substitui o texto branco/escuro) */
+    --text-muted: #93c5fd;      /* Azul suave para textos secundários */
+    --text-light: #bae6fd;      /* Azul pastel super claro */
+    --bg-main: #0b132b;         /* Fundo da tela em azul noite */
+    --card-bg: #1c2541;         /* Fundo dos cartões em azul escuro fechado */
+    --border-color: #1e3a8a;    /* Bordas em azul escuro sob medida */
 }
 
 * {
@@ -48,13 +51,13 @@ body {
 .hero h1 {
     font-size: 3.5rem;
     margin: 20px 0 10px;
-    color: var(--text-light);
+    color: var(--text-primary);
     font-weight: 900;
 }
 
 .hero p {
     font-size: 1.3rem;
-    color: #94a3b8;
+    color: var(--text-muted);
     max-width: 750px;
     margin: 0 auto 30px;
 }
@@ -79,7 +82,7 @@ body {
 
 .stat-label {
     font-size: 0.85rem;
-    color: #94a3b8;
+    color: var(--text-muted);
 }
 
 /* Barra de Ferramentas Fixa e Interativa */
@@ -89,7 +92,8 @@ body {
     z-index: 100;
     background-color: var(--secondary-dark);
     padding: 15px 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(3, 7, 18, 0.5);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .bar-container {
@@ -112,8 +116,8 @@ body {
 
 .filter-btn {
     background-color: transparent;
-    color: #94a3b8;
-    border: 1px solid #334155;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
     padding: 6px 14px;
     border-radius: 15px;
     cursor: pointer;
@@ -141,18 +145,18 @@ body {
 }
 
 .post-card {
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border-radius: 16px;
     padding: 40px;
     margin-bottom: 45px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    box-shadow: 0 10px 30px rgba(3, 7, 18, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .post-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.15);
     border-color: var(--accent-blue);
 }
 
@@ -170,6 +174,7 @@ body {
     font-weight: 800;
     padding: 6px 16px;
     border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
 .read-time {
@@ -180,13 +185,13 @@ body {
 
 .post-card h2 {
     font-size: 2rem;
-    color: var(--primary-dark);
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
 .post-subtitle {
     font-size: 1.2rem;
-    color: var(--hover-blue);
+    color: var(--accent-blue);
     margin-bottom: 25px;
     font-weight: 600;
 }
@@ -216,7 +221,8 @@ body {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(3, 7, 18, 0.4);
+    border: 1px solid var(--border-color);
     height: 220px;
 }
 
@@ -235,7 +241,7 @@ body {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    background-color: rgba(3, 7, 18, 0.85);
+    background-color: rgba(3, 7, 18, 0.9);
     color: var(--accent-blue);
     font-size: 0.75rem;
     font-weight: bold;
@@ -245,20 +251,20 @@ body {
 
 .like-btn {
     width: 100%;
-    background-color: var(--bg-main);
+    background-color: var(--secondary-dark);
     border: 1px solid var(--border-color);
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    color: var(--secondary-dark);
+    color: var(--text-light);
     transition: all 0.2s ease;
 }
 
 .like-btn:hover, .like-btn.liked {
-    background-color: var(--secondary-dark);
-    color: var(--accent-blue);
-    border-color: var(--secondary-dark);
+    background-color: var(--accent-blue);
+    color: var(--primary-dark);
+    border-color: var(--accent-blue);
 }
 
 /* Painel Interativo para a Seção TikTok */
@@ -277,7 +283,7 @@ body {
 
 .interactive-panel p {
     font-size: 0.85rem;
-    color: #94a3b8;
+    color: var(--text-muted);
     margin-bottom: 15px;
 }
 
@@ -289,9 +295,9 @@ body {
 }
 
 .mood-btn {
-    background-color: #1e293b;
+    background-color: var(--card-dark);
     color: var(--text-light);
-    border: 1px solid #334155;
+    border: 1px solid var(--border-color);
     padding: 8px;
     border-radius: 6px;
     cursor: pointer;
@@ -305,12 +311,13 @@ body {
 }
 
 .output-box {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(56, 189, 248, 0.1);
     padding: 10px;
     border-radius: 6px;
     font-size: 0.8rem;
     color: var(--accent-blue);
     text-align: center;
+    border: 1px dashed var(--border-color);
 }
 
 /* Rodapé */
@@ -325,7 +332,7 @@ footer {
 
 footer p {
     font-size: 0.95rem;
-    color: #94a3b8;
+    color: var(--text-muted);
     letter-spacing: 0.5px;
 }
 
