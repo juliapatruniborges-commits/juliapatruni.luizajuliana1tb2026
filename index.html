@@ -3,220 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inovação & Soluções Digitais</title>
-    <style>
-        :root {
-            --primary-color: #1e3a8a;
-            --secondary-color: #3b82f6;
-            --accent-color: #f59e0b;
-            --text-color: #1f2937;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(59, 130, 246, 0.85)), 
-                        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            color: white;
-            padding: 100px 20px 80px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 25px auto;
-            opacity: 0.95;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: #ffffff;
-            padding: 12px 30px;
-            font-weight: bold;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background-color: #d97706;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: var(--accent-color);
-            margin: 8px auto 0 auto;
-            border-radius: 2px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 25px;
-            flex-grow: 1;
-        }
-
-        .card h3 {
-            color: var(--primary-color);
-            margin-bottom: 12px;
-            font-size: 1.4rem;
-        }
-
-        .card p {
-            color: #4b5563;
-            font-size: 0.98rem;
-        }
-
-        .about-section {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 50px;
-            overflow: hidden;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .about-img {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-        }
-
-        .about-text {
-            padding: 40px;
-            width: 100%;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-            color: #374151;
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-    </style>
+    <title>Sartorial & Culture - Blog de Moda</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Inovação Digital ao Seu Alcance</h1>
-        <p>Criamos soluções eficientes, modernas e focadas em resultados para o seu negócio crescer de forma sustentável.</p>
-        <a href="#contato" class="cta-btn">Saiba Mais</a>
+    <!-- Cabeçalho -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">Edição Especial</span>
+            <h1>Sartorial & Culture</h1>
+            <p>Uma jornada sem julgamentos pelas tendências, absurdos e atitudes que moldaram nosso guarda-roupa.</p>
+        </div>
     </header>
 
-    <div class="container">
-        <h2 class="section-title">Nossos Serviços</h2>
-        <div class="grid">
-            <div class="card">
-                <img class="card-img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Desenvolvimento Web - Programação e telas">
-                <div class="card-content">
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Criação de sites e aplicações web de alta performance, otimizados para mecanismos de busca e totalmente responsivos em qualquer dispositivo.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Consultoria Tecnológica - Gráficos e análises">
-                <div class="card-content">
-                    <h3>Consultoria Tecnológica</h3>
-                    <p>Análise detalhada da sua infraestrutura digital e implementação de melhores práticas para aumentar a eficiência operacional.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="Segurança da Informação - Dados e cadeados digitais">
-                <div class="card-content">
-                    <h3>Segurança da Informação</h3>
-                    <p>Proteção de dados avançada e auditoria de sistemas para garantir que suas operações estejam sempre seguras e em conformidade.</p>
-                </div>
-            </div>
-        </div>
+    <!-- Container Principal -->
+    <main class="container">
 
-        <h2 class="section-title">Sobre Nós</h2>
-        <div class="about-section">
-            <img class="about-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="Equipe trabalhando reunida no escritório">
-            <div class="about-text">
-                <p>Somos uma equipe focada em transformar desafios complexos em soluções simples e elegantes. Acreditamos no poder da tecnologia para conectar pessoas e impulsionar negócios.</p>
-                <p>Nossa abordagem é pautada na excelência técnica, no design limpo e na entrega de valor contínuo para nossos clientes, garantindo estrutura forte e comunicação clara em cada projeto.</p>
+        <!-- Tópico 1 -->
+        <article class="post-card">
+            <div class="post-header">
+                <span class="topic-number">01</span>
+                <h2>1. História da Moda: Uma Viagem Pelas Décadas</h2>
             </div>
-        </div>
-    </div>
+            <h3 class="post-subtitle">Do Espartilho ao Cintura Baixa: Como Nossos Antepassados Sobreviveram aos Looks do Passado</h3>
+            
+            <div class="post-body">
+                <p>Se você acha que a sua foto de 2018 está vergonhosa, imagine se o Instagram existisse em 1920. A moda é uma máquina do tempo meio maluca. Nos anos 20, as melindrosas resolveram tacar o foda-se para os espartilhos sufocantes e usaram vestidos soltos para conseguir, pasme, respirar e dançar. Nos anos 70, o mundo foi dominado pelas calças boca de sino — que funcionavam quase como aspiradores de pó ambulantes na rua. Já nos anos 2000... bom, os anos 2000 nos deram a calça de cintura tão baixa que beirava o perigo e óculos escuros coloridos usados dentro de locais fechados às 22h.</p>
+                <p>A grande lição? A moda é completamente cíclica. Tudo o que sua avó usou, sua mãe criticou e você jurou que nunca usaria... adivinhe? Já está no seu carrinho de compras online neste exato momento.</p>
+            </div>
 
-    <footer id="contato">
-        <p>&copy; 2026 Inovação Digital. Todos os direitos reservados.</p>
+            <!-- Imagem Interativa -->
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80" alt="Evolução das tendências de moda vintage ao longo das décadas">
+                <span class="img-caption">A evolução das silhuetas: o ciclo infinito da moda.</span>
+            </div>
+        </article>
+
+        <!-- Tópico 2 -->
+        <article class="post-card">
+            <div class="post-header">
+                <span class="topic-number">02</span>
+                <h2>2. Streetwear: Da Cultura Urbana às Passarelas</h2>
+            </div>
+            <h3 class="post-subtitle">Como o Moletom do Seu Irmão Virou Artigo de Luxo de R$ 5 Mil</h3>
+            
+            <div class="post-body">
+                <p>Houve um tempo em que usar tênis de corrida e moletom largo significava apenas duas coisas: ou você estava indo para a aula de Educação Física, ou estava com preguiça de se arrumar. Eis que o Streetwear entra em cena. Nascido da junção entre a cultura do skate, do surf nova-iorquino e do hip-hop nos anos 80 e 90, esse estilo provou que conforto e atitude andam juntos.</p>
+                <p>O plot twist? As marcas de alta costura viram isso e pensaram: "Hum, e se a gente vendesse esse mesmo tijolo ou esse mesmo moletom gigante por um preço de um Celta usado?". Hoje, o streetwear domina as passarelas de Paris, e as pessoas fazem filas de 12 horas para comprar um tênis que parece ter saído de um filme futurista dos anos 90. E honestamente? A gente ama.</p>
+            </div>
+
+            <!-- Imagem Interativa -->
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1200&q=80" alt="Streetwear urbano moderno e tênis futurista">
+                <span class="img-caption">Doas pistas de skate para as semanas de moda internacionais.</span>
+            </div>
+        </article>
+
+        <!-- Tópico 3 (Sem imagem - Foco em interatividade) -->
+        <article class="post-card highlight-box">
+            <div class="post-header">
+                <span class="topic-number">03</span>
+                <h2>3. Microtendências e a Era do TikTok (Aesthetics)</h2>
+            </div>
+            <h3 class="post-subtitle">Você é "Clean Girl" até Terça, e "Mob Wife" na Quarta: A Era das Estéticas Instantâneas</h3>
+            
+            <div class="post-body">
+                <p>Se você piscar no TikTok, perdeu três novas tendências de moda. Antigamente, uma tendência durava dez anos. Depois, passou a durar uma estação. Hoje em dia, a vida útil de uma "aesthetic" é de aproximadamente 14 minutos e meio. Numa semana, todo mundo precisa ser Clean Girl (manteiga de cacau, coque lambido e visual minimalista). Na semana seguinte, o algoritmo decide que o legal é ser Mob Wife (casaco de pele sintética gigantesco, óculos escuros e cara de quem manda na máfia italiana).</p>
+                <p>Essas microtendências são super divertidas para testar estilos sem se levar tão a sério, mas fica o alerta de amigo (e de UX Designer): não precisa falir o seu cartão de crédito a cada novo vídeo do feed. O segredo é pegar o que combina com você e rir do absurdo do resto!</p>
+            </div>
+
+            <!-- Elemento Interativo Interativo -->
+            <div class="interactive-widget">
+                <p class="widget-title">Qual é a sua aesthetic de hoje?</p>
+                <div class="widget-buttons">
+                    <button onclick="alert('Visual minimalista ativado! Manteiga de cacau no bolso.')">Clean Girl ✨</button>
+                    <button onclick="alert('Óculos escuros em ambiente fechado liberado com sucesso! 😎')">Mob Wife 🕶️</button>
+                    <button onclick="alert('Conforto em primeiro lugar! Moletom 3 vezes maior que você.')">Street Wear 🛹</button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Tópico 4 (Sem imagem - Foco em Bloco Reflexivo) -->
+        <article class="post-card">
+            <div class="post-header">
+                <span class="topic-number">04</span>
+                <h2>4. Moda e Identidade: Roupas como Expressão Pessoal</h2>
+            </div>
+            <h3 class="post-subtitle">"Não Tenho Nada Para Usar": A Arte de Falar sem Dizer uma Palavra</h3>
+            
+            <div class="post-body">
+                <p>Sabe aquele momento clássico em que você olha para um guarda-roupa entulhado de roupas e solta a frase dramática: "Eu não tenho absolutamente NADA para vestir"? O que seu cérebro está tentando dizer na verdade é: "Nenhuma dessas peças representa quem eu quero ser hoje". E tudo bem!</p>
+                <p>A roupa é a nossa primeira camada de comunicação não verbal. Quando você acorda meio rebelde e bota um coturno pesado, ou quando quer passar despercebido e veste o maior moletom preto que encontra, você está contando uma história sobre si mesmo para o mundo. Usar moda a seu favor não é seguir regras ditadas por revistas, é montar a sua própria "armadura" para encarar a segunda-feira.</p>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Rodapé solicitado -->
+    <footer>
+        <p>&copy; 2026 - Desenvolvido por: Julia Patruni e Luiza Juliana - Turma 1TB</p>
     </footer>
 
 </body>
